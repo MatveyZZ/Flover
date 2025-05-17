@@ -26,7 +26,6 @@ body {
 .container .logo img {
     max-width: 100%; /* Адаптивное изображение */
     height: auto; /* Сохранение пропорций */
-    display: block; /* Убираем пробел под изображением */
 }
 
 .container .info h1 {
