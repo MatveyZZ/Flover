@@ -37,3 +37,8 @@ body {
     text-align: center
 }
 
+@media (max-width: 768px) {
+    .container .info h1 {
+        font-size: 6vh; /* Уменьшите размер шрифта для мобильных устройств */
+    }
+}
