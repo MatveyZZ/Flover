@@ -9,16 +9,20 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center; /* Центрирование по вертикали */
     background: #faedcd;
 }
 
 .container {
     position: relative;
     padding: 20px; /* Добавьте отступы для мобильных устройств */
+    width: 90%; /* Установите ширину контейнера */
+    max-width: 600px; /* Максимальная ширина для больших экранов */
 }
 
-.container .logo {
-    pointer-events: none;
+.container .logo img {
+    max-width: 100%; /* Адаптивное изображение */
+    height: auto; /* Сохранение пропорций */
 }
 
 .container .info h1 {
@@ -31,5 +35,9 @@ body {
 @media (max-width: 768px) {
     .container .info h1 {
         font-size: 6vh; /* Уменьшите размер шрифта для мобильных устройств */
+    }
+    
+    .container {
+        padding: 10px; /* Уменьшите отступы для мобильных устройств */
     }
 }
