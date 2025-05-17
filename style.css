@@ -1,7 +1,7 @@
 * {
     font-family: "Inter", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Убираем все отступы */
+    padding: 0; /* Убираем все поля */
     box-sizing: border-box;
 }
 
@@ -15,7 +15,7 @@ body {
 
 .container {
     position: relative;
-    padding: 20px; /* Добавьте отступы для мобильных устройств */
+    padding: 20px; /* Отступы для контейнера */
     width: 90%; /* Установите ширину контейнера */
     max-width: 600px; /* Максимальная ширина для больших экранов */
 }
@@ -23,6 +23,7 @@ body {
 .container .logo img {
     max-width: 100%; /* Адаптивное изображение */
     height: auto; /* Сохранение пропорций */
+    display: block; /* Убираем пробел под изображением */
 }
 
 .container .info h1 {
@@ -33,11 +34,11 @@ body {
 }
 
 @media (max-width: 768px) {
-    .container .info h1 {
-        font-size: 6vh; /* Уменьшите размер шрифта для мобильных устройств */
-    }
-    
     .container {
         padding: 10px; /* Уменьшите отступы для мобильных устройств */
+    }
+
+    .container .info h1 {
+        font-size: 6vh; /* Уменьшите размер шрифта для мобильных устройств */
     }
 }
