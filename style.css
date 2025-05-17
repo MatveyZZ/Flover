@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DK+Loopet:wght@100..400&family=Special+Gothic+Expanded+One&family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DK+Loopet:wght@100..400&family=Special+Gothic+Expanded+One&family=VT323&display=swap');
 
-
 * {
     font-family: "Inter", sans-serif;
-    margin: 0; /* Убираем все отступы */
-    padding: 0; /* Убираем все поля */
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -18,13 +17,8 @@ body {
 }
 
 .container {
-    display: flex; /* Используем Flexbox для контейнера */
-    flex-direction: column; /* Располагаем элементы по вертикали */
-    justify-content: center; /* Центрируем элементы по вертикали */
-    align-items: center; /* Центрируем элементы по горизонтали */
-    padding: 20px; /* Отступы для контейнера */
-    width: 90%; /* Установите ширину контейнера */
-    max-width: 600px; /* Максимальная ширина для больших экранов */
+    position: relative;
+    padding: 20px; /* Отступы для мобильных устройств */
 }
 
 .container .logo img {
@@ -35,16 +29,16 @@ body {
 .container .info h1 {
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    font-size: 8vh;
+    font-size: 8vw; /* Размер шрифта адаптируется по ширине экрана */
     text-align: center;
+    white-space: normal; /* Разрешить перенос текста */
 }
 
 @media (max-width: 768px) {
+    .container .info h1 {
+        font-size: 10vw; /* Увеличьте размер шрифта для мобильных устройств */
+    }
     .container {
         padding: 10px; /* Уменьшите отступы для мобильных устройств */
-    }
-
-    .container .info h1 {
-        font-size: 6vh; /* Уменьшите размер шрифта для мобильных устройств */
     }
 }
