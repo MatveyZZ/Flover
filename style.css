@@ -11,14 +11,13 @@
 body {
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center; /* Центрирование по вертикали */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
     background: #faedcd;
 }
 
 .container {
-    position: relative;
-    padding: 20px; /* Отступы для мобильных устройств */
+    text-align: center; /* Центрирование текста внутри контейнера */
 }
 
 .container .logo img {
@@ -29,9 +28,8 @@ body {
 .container .info h1 {
     font-family: "Pacifico", cursive;
     font-weight: 400;
-    font-size: 8vw; /* Размер шрифта адаптируется по ширине экрана */
-    text-align: center;
-    white-space: normal; /* Разрешить перенос текста */
+    font-size: 8vh;
+    margin-top: 0; /* Убираем отступ сверху для заголовка */
 }
 
 @media (max-width: 768px) {
